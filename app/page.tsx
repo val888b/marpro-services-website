@@ -3,7 +3,7 @@ import { Hero } from "@/components/Hero";
 import { Trust } from "@/components/Trust";
 import { Stats } from "@/components/Stats";
 import { WhoWeHelp } from "@/components/WhoWeHelp";
-import { Services } from "@/components/Services";
+import { WhatWeHandle } from "@/components/WhatWeHandle";
 import { ProblemsWeSolve } from "@/components/ProblemsWeSolve";
 import { WhyMarPro } from "@/components/WhyMarPro";
 import { Process } from "@/components/Process";
@@ -23,7 +23,7 @@ export default function Home() {
         <Trust />
         <Stats />
         <WhoWeHelp />
-        <Services />
+        <WhatWeHandle />
         <ProblemsWeSolve />
         <WhyMarPro />
         <Process />
