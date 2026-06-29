@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 export function About() {
   return (
-    <section id="about" className="bg-[#07090f] py-24">
+    <section id="company" className="bg-[#07090f] py-24">
       <div className="mx-auto max-w-3xl px-6 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 16 }}

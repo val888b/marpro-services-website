@@ -21,33 +21,9 @@ const reasons = [
   },
   {
     icon: MessageCircle,
-    title: "Reliable Communication",
+    title: "Clear Communication",
     description:
       "Property managers get clear, consistent updates from first contact through completed service.",
-  },
-  {
-    icon: FileText,
-    title: "Professional Documentation",
-    description:
-      "Every job is documented so you have a clear record for ownership, tenants, and compliance.",
-  },
-  {
-    icon: Repeat,
-    title: "Recurring Maintenance Support",
-    description:
-      "Scheduled service plans keep properties consistently maintained without manual follow-up.",
-  },
-  {
-    icon: Camera,
-    title: "Before-and-After Photo Records",
-    description:
-      "Visual documentation of every job gives you proof of work and condition over time.",
-  },
-  {
-    icon: Zap,
-    title: "Fast Response for Property Managers",
-    description:
-      "Quick turnaround on quotes and scheduling so issues get resolved without delay.",
   },
   {
     icon: PackageCheck,
@@ -56,10 +32,34 @@ const reasons = [
       "Commercial-grade equipment and supplies suited to the surface and the job, every time.",
   },
   {
+    icon: Camera,
+    title: "Before-and-After Documentation",
+    description:
+      "Visual documentation of every job gives you proof of work and condition over time.",
+  },
+  {
+    icon: Repeat,
+    title: "Recurring Service Support",
+    description:
+      "Scheduled service plans keep properties consistently maintained without manual follow-up.",
+  },
+  {
+    icon: Zap,
+    title: "Fast Property Manager Response",
+    description:
+      "Quick turnaround on quotes and scheduling so issues get resolved without delay.",
+  },
+  {
     icon: MapPinned,
-    title: "Bay Area Service Experience",
+    title: "Bay Area Local Operation",
     description:
       "Local knowledge of San Jose, Milpitas, and surrounding commercial properties.",
+  },
+  {
+    icon: FileText,
+    title: "Owner-Level Attention to Detail",
+    description:
+      "Every property is treated with the care and accountability of an owner-operator.",
   },
 ];
 

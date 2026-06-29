@@ -1,54 +1,48 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Building2, ShieldCheck, MapPin, Clock } from "lucide-react";
+import {
+  Building2,
+  Home,
+  Stethoscope,
+  Store,
+  UtensilsCrossed,
+  ClipboardList,
+} from "lucide-react";
 
-const stats = [
-  {
-    icon: Building2,
-    label: "Property Types Served",
-    value: "HOAs, medical offices, plazas & offices",
-  },
-  {
-    icon: MapPin,
-    label: "Service Area",
-    value: "San Jose, Milpitas & the Bay Area",
-  },
-  {
-    icon: Clock,
-    label: "Response Time",
-    value: "Fast turnaround for property managers",
-  },
-  {
-    icon: ShieldCheck,
-    label: "Documentation",
-    value: "Before & after photo records",
-  },
+const markets = [
+  { icon: Building2, label: "Property Managers" },
+  { icon: Home, label: "HOAs" },
+  { icon: Stethoscope, label: "Medical Offices" },
+  { icon: Store, label: "Commercial Plazas" },
+  { icon: UtensilsCrossed, label: "Food-Service Properties" },
+  { icon: ClipboardList, label: "Facility Managers" },
 ];
 
 export function Trust() {
   return (
-    <section className="border-y border-white/5 bg-charcoal/40 py-16">
+    <section id="industries" className="border-y border-white/5 bg-charcoal/40 py-16">
       <div className="mx-auto max-w-7xl px-6">
-        <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
-          {stats.map((stat, i) => (
+        <p className="text-center text-sm font-medium text-gray-500">
+          Trusted by property professionals across these markets
+        </p>
+
+        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-6">
+          {markets.map((market, i) => (
             <motion.div
-              key={stat.label}
+              key={market.label}
               initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              className="flex items-start gap-4"
+              transition={{ duration: 0.5, delay: i * 0.06 }}
+              className="flex flex-col items-center gap-3 rounded-xl border border-white/5 bg-[#07090f]/60 px-4 py-6 text-center transition-all hover:border-accent/30"
             >
-              <div className="rounded-lg bg-accent/10 p-3 text-accent">
-                <stat.icon size={22} />
-              </div>
-              <div>
-                <p className="text-sm font-semibold text-white">
-                  {stat.label}
-                </p>
-                <p className="mt-1 text-sm text-gray-400">{stat.value}</p>
-              </div>
+              <span className="rounded-lg bg-accent/10 p-2.5 text-accent">
+                <market.icon size={20} />
+              </span>
+              <span className="text-sm font-semibold text-white">
+                {market.label}
+              </span>
             </motion.div>
           ))}
         </div>

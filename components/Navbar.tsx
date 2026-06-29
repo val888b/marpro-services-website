@@ -6,10 +6,9 @@ import { Logo } from "./Logo";
 
 const links = [
   { label: "Services", href: "#services" },
-  { label: "Pressure Washing", href: "#pressure-washing" },
-  { label: "Why MarPro", href: "#why-marpro" },
-  { label: "Work", href: "#work" },
-  { label: "About", href: "#about" },
+  { label: "Industries", href: "#industries" },
+  { label: "Exterior Maintenance", href: "#exterior-maintenance" },
+  { label: "Company", href: "#company" },
   { label: "Contact", href: "#contact" },
 ];
 

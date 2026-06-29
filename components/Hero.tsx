@@ -1,8 +1,19 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, ListChecks } from "lucide-react";
+import { ArrowRight, ListChecks, MapPin, ShieldCheck, FileCheck } from "lucide-react";
 import { Logo } from "./Logo";
+
+const badges = [
+  { icon: MapPin, label: "Bay Area Local" },
+  { icon: ShieldCheck, label: "Commercial-Focused" },
+  { icon: FileCheck, label: "Documented Service" },
+];
+
+const floatingCards = [
+  { label: "Service Areas", value: "San Jose · Milpitas" },
+  { label: "Documentation", value: "Before & After Photos" },
+];
 
 export function Hero() {
   return (
@@ -13,14 +24,46 @@ export function Hero() {
       <div className="absolute inset-0 bg-grid-pattern bg-[size:48px_48px] [mask-image:radial-gradient(ellipse_60%_60%_at_50%_0%,#000_60%,transparent_100%)]" />
       <div className="absolute left-1/2 top-0 -z-10 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-accent/10 blur-[120px]" />
 
+      {/* Floating layered badge cards (desktop only) */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.4 }}
+        className="absolute left-[6%] top-40 hidden w-48 rounded-xl border border-white/10 bg-charcoal/70 p-4 shadow-glow backdrop-blur-sm lg:block"
+      >
+        <p className="text-[11px] uppercase tracking-wide text-gray-500">
+          {floatingCards[0].label}
+        </p>
+        <p className="mt-1 text-sm font-semibold text-white">
+          {floatingCards[0].value}
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.55 }}
+        className="absolute right-[6%] top-64 hidden w-52 rounded-xl border border-white/10 bg-charcoal/70 p-4 shadow-glow backdrop-blur-sm lg:block"
+      >
+        <p className="text-[11px] uppercase tracking-wide text-gray-500">
+          {floatingCards[1].label}
+        </p>
+        <p className="mt-1 text-sm font-semibold text-white">
+          {floatingCards[1].value}
+        </p>
+      </motion.div>
+
       <div className="relative mx-auto max-w-5xl px-6 text-center">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="mb-8 flex justify-center"
+          className="mb-8 flex items-center justify-center gap-3"
         >
-          <Logo variant="full" className="h-20 sm:h-24" />
+          <Logo variant="mark" className="h-10" />
+          <span className="text-base font-semibold text-white">
+            MarPro <span className="text-accent">Services</span>
+          </span>
         </motion.div>
 
         <motion.h1
@@ -48,6 +91,23 @@ export function Hero() {
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.3 }}
+          className="mt-8 flex flex-wrap items-center justify-center gap-3"
+        >
+          {badges.map((badge) => (
+            <span
+              key={badge.label}
+              className="flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-1.5 text-xs font-medium text-gray-300"
+            >
+              <badge.icon size={14} className="text-accent" />
+              {badge.label}
+            </span>
+          ))}
+        </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.4 }}
           className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row"
         >
           <a
