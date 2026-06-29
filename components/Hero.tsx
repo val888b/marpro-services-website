@@ -20,7 +20,7 @@ export function Hero() {
           transition={{ duration: 0.6 }}
           className="mb-8 flex justify-center"
         >
-          <Logo variant="full" className="h-16 w-auto" />
+          <Logo variant="full" className="h-20 sm:h-24" />
         </motion.div>
 
         <motion.h1

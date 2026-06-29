@@ -14,7 +14,7 @@ export function Footer() {
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
-            <Logo variant="full" className="h-9 w-auto" />
+            <Logo variant="full" className="h-20" />
             <p className="mt-4 text-sm text-gray-500">
               Commercial property maintenance for the Bay Area.
             </p>
