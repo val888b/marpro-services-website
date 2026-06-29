@@ -43,7 +43,7 @@ export function Hero() {
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.55 }}
-        className="absolute right-[6%] top-64 hidden w-52 rounded-xl border border-white/10 bg-charcoal/70 p-4 shadow-glow backdrop-blur-sm lg:block"
+        className="absolute right-[4%] top-[34rem] hidden w-52 rounded-xl border border-white/10 bg-charcoal/70 p-4 shadow-glow backdrop-blur-sm lg:block"
       >
         <p className="text-[11px] uppercase tracking-wide text-gray-500">
           {floatingCards[1].label}
